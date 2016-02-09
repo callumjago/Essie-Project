@@ -1,6 +1,6 @@
-<section ng-controller="FormController">
+<section ng-controller="FormsController">
   
-<div class="row" ng-controller="ListingsController" ng-init="find()">
+<div class="row" ng-controller="FormsController">
   <div class="col-md-offset-1 col-md-10">
     
     <div ng-show="error" class="text-danger">
@@ -17,9 +17,9 @@
           <th>Building Name</th>
           <th></th>
         </tr>
-        <tr ng-repeat="listing in listings | filter: query" ui-sref="listings.view({ listingId: listing._id })">
-          <td>{{listing.code}}</td>
-          <td>{{listing.name}}</td>
+        <tr ng-repeat="form in forms | filter: query">
+          <td>{{form.code}}</td>
+          <td>{{form.name}}</td>
         </tr>
       </table>
     </div>
